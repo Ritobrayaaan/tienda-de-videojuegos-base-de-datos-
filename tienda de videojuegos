@@ -1,0 +1,630 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : tienda de videojuegos
+ Source Server Type    : MySQL
+ Source Server Version : 100422
+ Source Host           : localhost:3306
+ Source Schema         : tienda de videojuegos
+
+ Target Server Type    : MySQL
+ Target Server Version : 100422
+ File Encoding         : 65001
+
+ Date: 07/06/2022 13:53:20
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for bitacora
+-- ----------------------------
+DROP TABLE IF EXISTS `bitacora`;
+CREATE TABLE `bitacora`  (
+  `id_bitacora` int NOT NULL AUTO_INCREMENT,
+  `Id` int NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
+  `ejecutor` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `actividad` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `informacion_actual` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `informacion` int NOT NULL,
+  PRIMARY KEY (`id_bitacora`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 138 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of bitacora
+-- ----------------------------
+INSERT INTO `bitacora` VALUES (1, 63, '2022-06-06 14:39:18', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Resident Evil. Village - Standard Edition - Xbox Series X', 0);
+INSERT INTO `bitacora` VALUES (2, 64, '2022-06-06 15:12:13', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Elden Ring Xbox One - Standard Edition - Xbox One', 0);
+INSERT INTO `bitacora` VALUES (3, 65, '2022-06-06 15:13:03', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Sekiro Shadows Die Twice - Xbox One - Estándar Edition', 0);
+INSERT INTO `bitacora` VALUES (4, 66, '2022-06-06 15:13:49', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Dragon Ball Z - Kakarot Xbox One', 0);
+INSERT INTO `bitacora` VALUES (5, 67, '2022-06-06 15:14:29', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Dragon Ball: Xenoverse 2', 0);
+INSERT INTO `bitacora` VALUES (6, 68, '2022-06-06 15:15:27', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Crash Bandicoot 4', 0);
+INSERT INTO `bitacora` VALUES (7, 69, '2022-06-06 15:15:57', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (8, 70, '2022-06-06 15:17:14', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Xbox One - 3', 0);
+INSERT INTO `bitacora` VALUES (9, 71, '2022-06-06 15:17:55', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Far Cry 4: Ltd Edt - Standard Edition - Xbox One', 0);
+INSERT INTO `bitacora` VALUES (10, 72, '2022-06-06 15:18:29', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Batman: Arkham Knight - Xbox One - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (11, 73, '2022-06-06 15:18:58', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Batman: Return to Arkham', 0);
+INSERT INTO `bitacora` VALUES (12, 74, '2022-06-06 15:19:56', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Hitman 2 - Xbox One - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (13, 75, '2022-06-06 15:20:28', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (14, 76, '2022-06-06 15:26:34', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: SonyPS4 Marvel Spiderman: Edición', 0);
+INSERT INTO `bitacora` VALUES (15, 77, '2022-06-06 15:28:40', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: The Last of Us Part II - PlayStation 4 ', 0);
+INSERT INTO `bitacora` VALUES (16, 78, '2022-06-06 15:29:30', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Teenage Mutant Ninja Turtles: The Cowabunga Collection', 0);
+INSERT INTO `bitacora` VALUES (17, 79, '2022-06-06 15:30:14', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: The Dungeon of Naheulbeuk. The Amulet of Chaos ', 0);
+INSERT INTO `bitacora` VALUES (18, 80, '2022-06-06 15:30:53', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Hades - Standard Edition ', 0);
+INSERT INTO `bitacora` VALUES (19, 81, '2022-06-06 15:31:45', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Ghost of Tsushima Director\'s Cut - Standard Edition - Playstation 4', 0);
+INSERT INTO `bitacora` VALUES (20, 82, '2022-06-06 15:32:46', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: God of War - Hits - - Standard Edition - PlayStation 4', 0);
+INSERT INTO `bitacora` VALUES (21, 83, '2022-06-06 15:33:29', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Horizon Zero Dawn Complete Edition', 0);
+INSERT INTO `bitacora` VALUES (22, 84, '2022-06-06 15:34:33', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Spider-Man: Miles Morales Ultimate Edition', 0);
+INSERT INTO `bitacora` VALUES (23, 85, '2022-06-06 15:35:16', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Crash Bandicoot 4: It’s About Time', 0);
+INSERT INTO `bitacora` VALUES (24, 86, '2022-06-06 15:36:33', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Gta V Premium Edition', 0);
+INSERT INTO `bitacora` VALUES (25, 87, '2022-06-06 15:37:11', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Grand Theft Auto. The Trilogy', 0);
+INSERT INTO `bitacora` VALUES (26, 88, '2022-06-06 15:37:47', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Horizon Zero Dawn Complete Edition', 0);
+INSERT INTO `bitacora` VALUES (27, 89, '2022-06-06 15:38:26', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (28, 90, '2022-06-06 15:39:15', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop! Star Wars: Book of Boba Fett', 0);
+INSERT INTO `bitacora` VALUES (29, 91, '2022-06-06 15:40:43', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop! Moment: Mandalorian - Boba Fett & Fennec Shand', 0);
+INSERT INTO `bitacora` VALUES (30, 92, '2022-06-06 15:41:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop! Pop Movies: Godzilla Vs Kong', 0);
+INSERT INTO `bitacora` VALUES (31, 93, '2022-06-06 15:41:46', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop Movies:Godzilla vs Kong-Heat Ray Godzilla', 0);
+INSERT INTO `bitacora` VALUES (32, 94, '2022-06-06 15:42:30', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop Películas: Godzilla Vs Kong- MechaGodzilla, Multicolor, estándar', 0);
+INSERT INTO `bitacora` VALUES (33, 95, '2022-06-06 15:43:03', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko - Pop Movies: Godzilla vs Kong- 10\"', 0);
+INSERT INTO `bitacora` VALUES (34, 96, '2022-06-06 15:44:30', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop! Marvel: Max Venom - Groot 10\"', 0);
+INSERT INTO `bitacora` VALUES (35, 97, '2022-06-06 15:45:00', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Green Goblin Venomized Pop Exclusivo HT', 0);
+INSERT INTO `bitacora` VALUES (36, 98, '2022-06-06 15:45:35', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko venomized Thor', 0);
+INSERT INTO `bitacora` VALUES (37, 99, '2022-06-06 15:46:30', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Figure Pop Marvel Venom Captain America ', 0);
+INSERT INTO `bitacora` VALUES (38, 100, '2022-06-06 15:47:02', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko - Pop! Marvel: Avengers Endgame', 0);
+INSERT INTO `bitacora` VALUES (39, 101, '2022-06-06 15:47:31', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop! Marvel: Falcon and The Winter Soldier - Captain America (Sam Wilson)', 0);
+INSERT INTO `bitacora` VALUES (40, 102, '2022-06-06 15:48:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Funko Pop!: The Falcon & Winter Soldier - Falcon (Flying)', 0);
+INSERT INTO `bitacora` VALUES (41, 1031, '2022-06-06 15:48:55', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (42, 104, '2022-06-06 15:49:32', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Coleccionable Star Wars™ 75277 Casco de Boba Fett™ (625', 0);
+INSERT INTO `bitacora` VALUES (43, 105, '2022-06-06 15:50:06', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars: The Mandalorian 75318 El Niño (1073 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (44, 106, '2022-06-06 15:50:45', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Kit de construcción LEGO® Star Wars: El Ataque de los Clones (1771 elementos): Y', 0);
+INSERT INTO `bitacora` VALUES (45, 107, '2022-06-06 15:51:18', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LIGHTAILING Conjunto de Luces para (Star Wars Yoda) Modelo de Construcción de Bl', 0);
+INSERT INTO `bitacora` VALUES (46, 108, '2022-06-06 15:51:49', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción DC Batman™ 76161 Batiplano de 1989 (2363 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (47, 109, '2022-06-06 15:52:37', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Barco Caprino', 0);
+INSERT INTO `bitacora` VALUES (48, 110, '2022-06-06 15:53:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción 10295 Porsche 911 (1458 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (49, 111, '2022-06-06 15:53:48', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (50, 112, '2022-06-06 15:54:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción de Modelo de Auto Technic™ 42115 Lamborghini Sián FKP 3', 0);
+INSERT INTO `bitacora` VALUES (51, 113, '2022-06-06 15:54:54', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Modelo de automóvil: Bugatti Chiron LEGO® Technic™ (42083)', 0);
+INSERT INTO `bitacora` VALUES (52, 114, '2022-06-06 15:55:25', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Technic™ 42125 Ferrari 488 GTE “AF Corse #51” (1677 Pie', 0);
+INSERT INTO `bitacora` VALUES (53, 115, '2022-06-06 15:56:09', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Kit de construcción LEGO® Technic™ (2573 elementos): Land Rover Defender (42110)', 0);
+INSERT INTO `bitacora` VALUES (54, 116, '2022-06-06 15:56:42', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Technic 42111 Dom’s Dodge Charger (1077 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (55, 117, '2022-06-06 15:57:09', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción CreatorExpert (1471 Elementos): Ford Mustang (10265)', 0);
+INSERT INTO `bitacora` VALUES (56, 118, '2022-06-06 15:57:40', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Kit de construcción LEGO® Star Wars: El Ascenso de Skywalker (1351 elementos): H', 0);
+INSERT INTO `bitacora` VALUES (57, 119, '2022-06-06 15:58:13', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars™ 75302 Transbordador Imperial (660 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (58, 120, '2022-06-06 15:58:43', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ATST de Hoth', 0);
+INSERT INTO `bitacora` VALUES (59, 121, '2022-06-06 15:59:29', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars: The Mandalorian 75292 The Razor Crest™ (1023', 0);
+INSERT INTO `bitacora` VALUES (60, 122, '2022-06-06 15:59:56', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars™ 75316 Caza Estelar Mandaloriano (544 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (61, 123, '2022-06-06 16:00:49', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (62, 124, '2022-06-06 16:01:32', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars™ 75311 Merodeador Blindado Imperial (478 Piez', 0);
+INSERT INTO `bitacora` VALUES (63, 125, '2022-06-06 16:02:11', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Star Wars: Una Nueva Esperanza (4784 Elementos): Destru', 0);
+INSERT INTO `bitacora` VALUES (64, 126, '2022-06-06 16:02:55', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Lego Star Wars at-at Ultimate Collector Series 75313 Juego de construcción con 6', 0);
+INSERT INTO `bitacora` VALUES (65, 127, '2022-06-06 16:03:39', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Globo Terraqueo', 0);
+INSERT INTO `bitacora` VALUES (66, 128, '2022-06-06 16:04:09', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Diorama Entrenamiento Jedi en Dagobah', 0);
+INSERT INTO `bitacora` VALUES (67, 129, '2022-06-06 16:04:46', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción DC Batman™ 76161 Batiplano de 1989 (2363 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (68, 130, '2022-06-06 16:05:16', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción DC Batman™ 76182 Capucha de Batman (410 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (69, 131, '2022-06-06 16:05:46', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción Marvel 76191 Guante del Infinito (590 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (70, 132, '2022-06-06 16:06:39', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Kit de construcción 10280 Ramo de Flores (756 Piezas)', 0);
+INSERT INTO `bitacora` VALUES (71, 134, '2022-06-06 16:07:08', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Iconic Rose 40460', 0);
+INSERT INTO `bitacora` VALUES (72, 135, '2022-06-06 16:07:39', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Duelo contra Zyclops', 0);
+INSERT INTO `bitacora` VALUES (73, 136, '2022-06-06 16:08:15', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Armadura Robotica de Pantera Negra', 0);
+INSERT INTO `bitacora` VALUES (74, 137, '2022-06-06 16:08:42', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Asalto Aéreo de los Eternos', 0);
+INSERT INTO `bitacora` VALUES (75, 138, '2022-06-06 16:09:40', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Ideas Daily Bugle', 0);
+INSERT INTO `bitacora` VALUES (76, 139, '2022-06-06 16:10:15', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: LEGO Moto Acrobatica Cohete\r\n', 0);
+INSERT INTO `bitacora` VALUES (77, 140, '2022-06-06 16:11:18', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Xbox Game Pass Ultimate 1 mes ', 0);
+INSERT INTO `bitacora` VALUES (78, 141, '2022-06-06 16:12:15', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: PDP Gaming Wired Controller: Revenant Blue ', 0);
+INSERT INTO `bitacora` VALUES (79, 142, '2022-06-06 16:12:47', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Control Inalámbrico Compatible con Nintendo Switch', 0);
+INSERT INTO `bitacora` VALUES (80, 143, '2022-06-06 16:13:37', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Switch Controller para Nintendo Switch / Switch Lite, Joystick inalámbrico Momen', 0);
+INSERT INTO `bitacora` VALUES (81, 144, '2022-06-06 16:14:09', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KUPVALON Capturadora de Video, 4K HDMI a USB 2.0 Vídeo Game Capture, Convertidor', 0);
+INSERT INTO `bitacora` VALUES (82, 145, '2022-06-06 16:14:53', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Control Alambrico Compatible Xbox One Y Pc Windows Con Vibración', 0);
+INSERT INTO `bitacora` VALUES (83, 146, '2022-06-06 16:15:36', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Gamepad Balamrush Brx20 XBOX ONE Inalámbrico / Windows | Receptor USB | Vibració', 0);
+INSERT INTO `bitacora` VALUES (84, 147, '2022-06-06 16:16:14', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: AVEDISTANTE Gamepad Bluetooth con 3 metodos de conexion, Controlador de Juego In', 0);
+INSERT INTO `bitacora` VALUES (85, 148, '2022-06-06 16:16:53', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Archy Mando Control Gamepad Joystick Compatible con Android inalámbrico con Blue', 0);
+INSERT INTO `bitacora` VALUES (86, 149, '2022-06-06 16:17:42', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Redlemon Cargador para Controles de PS5, Estación de Carga Dual para Controles d', 0);
+INSERT INTO `bitacora` VALUES (87, 150, '2022-06-06 16:18:31', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Cargador dual Mcbazel para PS5, cargador de controlador, estación de carga rápid', 0);
+INSERT INTO `bitacora` VALUES (88, 151, '2022-06-06 16:19:01', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Consola PlayStation 5 - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (89, 152, '2022-06-06 16:19:59', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Consola PlayStation 5 - Digital Edition', 0);
+INSERT INTO `bitacora` VALUES (90, 153, '2022-06-06 16:20:44', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Sony Interactive Entertainment LLC Estación de Carga para Dualsense StandardPlay', 0);
+INSERT INTO `bitacora` VALUES (91, 154, '2022-06-06 16:21:12', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Soporte de controlador, soporte de auriculares para Xbox Series X S / Xbox One /', 0);
+INSERT INTO `bitacora` VALUES (92, 155, '2022-06-06 16:21:42', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: WEPIGEEK - Soporte para teléfono celular, prensa para celular, plegable, compati', 0);
+INSERT INTO `bitacora` VALUES (93, 156, '2022-06-06 16:22:32', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Bangcheer - Cubierta antipolvo para Xbox Series X, funda de consola altamente el', 0);
+INSERT INTO `bitacora` VALUES (94, 157, '2022-06-06 16:23:06', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Control Inalámbrico Xbox– Pulse Red - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (95, 158, '2022-06-06 16:23:40', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Control Inalámbrico Xbox - Shock Blue', 0);
+INSERT INTO `bitacora` VALUES (96, 159, '2022-06-06 16:24:10', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Mineral Blue Shadow - Controlador inalámbrico personalizado para consola Xbox On', 0);
+INSERT INTO `bitacora` VALUES (97, 160, '2022-06-06 16:24:49', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Controlador inalámbrico para Xbox One, apto para Xbox Series X/S/Xbox One S/One ', 0);
+INSERT INTO `bitacora` VALUES (98, 161, '2022-06-06 16:25:24', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Mando inalámbrico para Xbox One, mando de juego Zamia Gamepad de 2,4 GHZ compati', 0);
+INSERT INTO `bitacora` VALUES (99, 162, '2022-06-06 16:25:56', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Audífonos Recon 50X para Xbox One, PS4 y PC - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (100, 163, '2022-06-06 16:26:22', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Ear Force Recon - Xbox One - Standard Edition', 0);
+INSERT INTO `bitacora` VALUES (101, 164, '2022-06-06 16:26:54', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (102, 165, '2022-06-06 16:28:00', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Carga y Juega Xbox One,OIVO Cargador Control para Xbox Series X/S and Xbox One S', 0);
+INSERT INTO `bitacora` VALUES (103, 166, '2022-06-06 16:28:31', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Cargador para Baterias de Controles Xbox serie X/S , Xbox One S /X - 2 Baterias ', 0);
+INSERT INTO `bitacora` VALUES (104, 167, '2022-06-06 16:29:07', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Carga y Juega Xbox Series S, OIVO Baterías Recargables para Series X/S and Xbox ', 0);
+INSERT INTO `bitacora` VALUES (105, 168, '2022-06-06 16:30:15', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Filtro de polvo para Xbox Series X, cubierta de filtro de polvo de ventilación a', 0);
+INSERT INTO `bitacora` VALUES (106, 169, '2022-06-06 16:30:47', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Seagate Tarjeta de expansión de Almacenamiento para Xbox Series X|S Unidad de Es', 0);
+INSERT INTO `bitacora` VALUES (107, 170, '2022-06-06 16:31:34', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: PDP Media Remote for Xbox - Xbox Series X', 0);
+INSERT INTO `bitacora` VALUES (108, 171, '2022-06-06 16:32:39', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: 8Bitdo Media Remote for Xbox One, Xbox Series X and Xbox Series S (Short Edition', 0);
+INSERT INTO `bitacora` VALUES (109, 172, '2022-06-06 16:33:21', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Razer Limited Edition Boba Fett Wireless Controller & Quick Charging Stand Bundl', 0);
+INSERT INTO `bitacora` VALUES (110, 173, '2022-06-06 16:33:51', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Controller Gear Xbox Pro Charging Stand Zest Orange. for Xbox Elite, Xbox One, S', 0);
+INSERT INTO `bitacora` VALUES (111, 174, '2022-06-06 16:34:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek Performance Grips para Xbox One | Negro.', 0);
+INSERT INTO `bitacora` VALUES (112, 175, '2022-06-06 16:34:44', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 0);
+INSERT INTO `bitacora` VALUES (113, 176, '2022-06-06 16:35:12', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Control alámbrico PowerA Spectra Infinity para Xbox Series X|S y One - Standard ', 0);
+INSERT INTO `bitacora` VALUES (114, 177, '2022-06-06 16:35:47', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: PowerA FUSION Pro 2 Controlador videojuegos con cable para Xbox Series X|S, Negr', 0);
+INSERT INTO `bitacora` VALUES (115, 178, '2022-06-06 16:36:12', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 0);
+INSERT INTO `bitacora` VALUES (116, 179, '2022-06-06 16:36:45', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek FPS Freek Vortex para Playstation 4 (PS4) y Playstation 5 (PS5) | P', 0);
+INSERT INTO `bitacora` VALUES (117, 180, '2022-06-06 16:37:25', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek Call of Duty: Vanguard Performance Thumbsticks for PlayStation 4 (P', 0);
+INSERT INTO `bitacora` VALUES (118, 181, '2022-06-06 16:37:51', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek Precision Rings | Aim Assist Motion Control for PlayStation 4 (PS4)', 0);
+INSERT INTO `bitacora` VALUES (119, 182, '2022-06-06 16:38:21', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek FPS Freek Battle Royale Nightfall para PlayStation 4 (PS4) y PlaySt', 0);
+INSERT INTO `bitacora` VALUES (120, 183, '2022-06-06 16:38:54', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 0);
+INSERT INTO `bitacora` VALUES (121, 184, '2022-06-06 16:40:45', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Microsoft Game Studios FST-00011 Elite Series 2 - Control Inalámbrico para Xbox ', 0);
+INSERT INTO `bitacora` VALUES (122, 185, '2022-06-06 16:41:26', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: PowerA FUSION Pro Control Alámbrico para Xbox One & Series X|S - Color Blanco - ', 0);
+INSERT INTO `bitacora` VALUES (123, 186, '2022-06-06 16:41:54', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Audífonos Gamer con Micrófono para PS4, Xbox One, PC, Diadema Auriculares Alámbr', 0);
+INSERT INTO `bitacora` VALUES (124, 187, '2022-06-06 16:42:21', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Mercury', 0);
+INSERT INTO `bitacora` VALUES (125, 188, '2022-06-06 16:42:47', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Quartz', 0);
+INSERT INTO `bitacora` VALUES (126, 189, '2022-06-06 16:43:12', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Green', 0);
+INSERT INTO `bitacora` VALUES (127, 190, '2022-06-06 16:43:53', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Razer Huntsman Mini - 60% Optical Keyboard (Clicky Purple Switch)', 0);
+INSERT INTO `bitacora` VALUES (128, 191, '2022-06-06 16:44:19', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (129, 192, '2022-06-06 16:44:58', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Z-66 Teclado mecánico para juegos, retroiluminación LED arco iris, teclas PBT de', 0);
+INSERT INTO `bitacora` VALUES (130, 193, '2022-06-06 16:45:25', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: OKKID Teclado mecánico, Teclado para Juegos con Cable, retroiluminación RGB, par', 0);
+INSERT INTO `bitacora` VALUES (131, 194, '2022-06-06 16:45:59', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: INSTIGO Silla Gamer Ergonómica IG626 Reclinable hasta 180° | con Cojines para So', 0);
+INSERT INTO `bitacora` VALUES (132, 195, '2022-06-06 16:46:27', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Balam Rush Silla Gamer Thunder Comp Ergonomica Gray Edition BR-932929', 0);
+INSERT INTO `bitacora` VALUES (133, 196, '2022-06-06 16:47:00', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Balam Rush Silla Gamer Thunder Tour Ergonomica Dark-Light Edition BR-932875', 0);
+INSERT INTO `bitacora` VALUES (134, 197, '2022-06-06 16:47:24', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: HON HONI2M1AFC10TK - Silla de Trabajo de Encendido, Color Gris y Negro', 0);
+INSERT INTO `bitacora` VALUES (135, 198, '2022-06-06 16:47:49', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: ', 0);
+INSERT INTO `bitacora` VALUES (136, 199, '2022-06-06 16:48:30', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Nintendo amiibo Link (Majora\'s Mask) (The Legend of Zelda series) (Japan Import)', 0);
+INSERT INTO `bitacora` VALUES (137, 200, '2022-06-06 16:49:06', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Nintendo amiibo Link (Twilight Princess) (The Legend of Zelda series) (Japan Imp', 0);
+
+-- ----------------------------
+-- Table structure for bitacora_del
+-- ----------------------------
+DROP TABLE IF EXISTS `bitacora_del`;
+CREATE TABLE `bitacora_del`  (
+  `id_bitacora` int NOT NULL AUTO_INCREMENT,
+  `Id` int NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
+  `ejecutor` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `actividad` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `informacion_actual` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `informacion` int NOT NULL,
+  PRIMARY KEY (`id_bitacora`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of bitacora_del
+-- ----------------------------
+INSERT INTO `bitacora_del` VALUES (2, 62, '2022-06-06 14:51:28', 'root@localhost', 'Se inserto nuevo producto', 'Informacion actual: Mortal Kombat Ultimate', 0);
+
+-- ----------------------------
+-- Table structure for cliente
+-- ----------------------------
+DROP TABLE IF EXISTS `cliente`;
+CREATE TABLE `cliente`  (
+  `idCliente` int NOT NULL AUTO_INCREMENT,
+  `cNombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `cApellido` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `cDireccion` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cFechaNac` date NOT NULL,
+  `cEmail` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cTel` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cRFC` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cDomFiscal` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cRazonSocial` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cCP` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cPais` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cEstado` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cMunicipio` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cSaldo` float NOT NULL,
+  `cDisponible` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idCliente`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cliente
+-- ----------------------------
+INSERT INTO `cliente` VALUES (1, 'Dahlia', 'Hawthrone', 'Solares 120-45', '1993-12-01', 'Dahlia@gmail.com', '3350643210', 'A12D45RFW3', 'Solares 120-45', 'Dahlia Hawthrone', '45135', 'México', 'Jalisco', 'Zapopan', 1046.8, 1);
+INSERT INTO `cliente` VALUES (2, 'Angel', 'Hernández', 'Santa Esther 201', '2001-03-09', 'omega05@outlook.com', '3320204312', 'AH453DFDCGDF', '', '', '45134', 'México', 'Jalisco', 'Guadalajara', 0, 1);
+INSERT INTO `cliente` VALUES (3, 'Miguel', 'Estrada', 'Tabachines 1004', '1990-01-20', 'Miguel_Estrada@outlook.com', '3320104319', 'ME493DFDC9DF', 'Revolución 200', 'Miguel Estrada', '46202', 'México', 'Jalisco', 'Guadalajara', 349.3, 1);
+INSERT INTO `cliente` VALUES (4, 'Monica', 'Zepeda', 'Santa Margarita 900', '1996-12-29', 'MonyZ@gmail.com', '3320201010', 'GTHFNDJAJW', 'Calle Banderas 190', 'Azura SA de CV', '45130', 'México', 'Jalisco', 'Zapopan', 0, 1);
+INSERT INTO `cliente` VALUES (5, 'Pablo', 'Rodriguez', 'Ramón corona 4522', '1992-10-10', 'PR92@hotmail.com', '3311345490', '', '', '', '45135', 'México', 'Jalisco', 'Zapopan', 0, 1);
+INSERT INTO `cliente` VALUES (6, 'Jaqueline', 'Pérez', 'Rio nilo 100', '1994-05-05', 'Jaque_PRTG@gmail.com', '5513905423', 'JP943DFDAFDH', 'Av. Guadalupe 2340', 'Empresa SA de CV', '45128', 'México', 'Tlaquepaque', 'Guadalajara', 0, 1);
+INSERT INTO `cliente` VALUES (7, 'Irvin', 'Bravo', 'Casa 1', '1990-01-02', 'irvin@hotmail.com', '3312345678', 'AGFHTBR6059', 'Casa 2', 'Empresa SA de CV', '10345', 'México', 'Jalisco', 'Tonalá', 0, 0);
+INSERT INTO `cliente` VALUES (8, 'Angel', 'Hernández', 'Santa Esther 201', '2001-03-09', 'omega05@outlook.com', '3320204312', 'AH453DFDCGDF', '', '', '45134', 'México', 'Jalisco', 'Guadalajara', 0, 1);
+INSERT INTO `cliente` VALUES (9, 'Miguel', 'Estrada', 'Tabachines 1004', '1990-01-20', 'Miguel_Estrada@outlook.com', '3320104319', 'ME493DFDC9DF', 'Revolución 200', 'Miguel Estrada', '46202', 'México', 'Jalisco', 'Guadalajara', 0, 1);
+INSERT INTO `cliente` VALUES (10, 'Monica', 'Zepeda', 'Santa Margarita 900', '1996-12-29', 'MonyZ@gmail.com', '3320201010', '', '', '', '45130', 'México', 'Jalisco', 'Zapopan', 0, 1);
+INSERT INTO `cliente` VALUES (11, 'Pablo', 'Rodriguez', 'Ramón corona 4522', '1992-10-10', 'PR92@hotmail.com', '3311345490', '', '', '', '45135', 'México', 'Jalisco', 'Zapopan', 0, 1);
+INSERT INTO `cliente` VALUES (12, 'Jaqueline', 'Pérez', 'Rio nilo 100', '1994-05-05', 'Jaque_PRTG@gmail.com', '5513905423', 'JP943DFDAFDH', 'Av. Guadalupe 2340', 'Empresa SA de CV', '45128', 'México', 'Tlaquepaque', 'Guadalajara', 0, 1);
+
+-- ----------------------------
+-- Table structure for detallefactura
+-- ----------------------------
+DROP TABLE IF EXISTS `detallefactura`;
+CREATE TABLE `detallefactura`  (
+  `Venta_idVenta` int NOT NULL,
+  `Factura_idFactura` int NOT NULL,
+  PRIMARY KEY (`Venta_idVenta`, `Factura_idFactura`) USING BTREE,
+  INDEX `fk_Venta_has_Factura_Factura1_idx`(`Factura_idFactura` ASC) USING BTREE,
+  INDEX `fk_Venta_has_Factura_Venta1_idx`(`Venta_idVenta` ASC) USING BTREE,
+  CONSTRAINT `fk_Venta_has_Factura_Factura1` FOREIGN KEY (`Factura_idFactura`) REFERENCES `factura` (`idFactura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Venta_has_Factura_Venta1` FOREIGN KEY (`Venta_idVenta`) REFERENCES `venta` (`idVenta`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of detallefactura
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for detalleventa
+-- ----------------------------
+DROP TABLE IF EXISTS `detalleventa`;
+CREATE TABLE `detalleventa`  (
+  `Producto_idProducto` int NOT NULL,
+  `Venta_idVenta` int NOT NULL,
+  `Cantidad` int NULL DEFAULT NULL,
+  `Precio` float NULL DEFAULT NULL,
+  PRIMARY KEY (`Producto_idProducto`, `Venta_idVenta`) USING BTREE,
+  INDEX `fk_Producto_has_Venta_Venta1_idx`(`Venta_idVenta` ASC) USING BTREE,
+  INDEX `fk_Producto_has_Venta_Producto1_idx`(`Producto_idProducto` ASC) USING BTREE,
+  CONSTRAINT `fk_Producto_has_Venta_Producto1` FOREIGN KEY (`Producto_idProducto`) REFERENCES `producto` (`idProducto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Producto_has_Venta_Venta1` FOREIGN KEY (`Venta_idVenta`) REFERENCES `venta` (`idVenta`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of detalleventa
+-- ----------------------------
+INSERT INTO `detalleventa` VALUES (1, 1, 1, 1399);
+INSERT INTO `detalleventa` VALUES (1, 3, 1, 1399);
+INSERT INTO `detalleventa` VALUES (1, 11, 3, 1399);
+INSERT INTO `detalleventa` VALUES (1, 12, 1, 1399);
+INSERT INTO `detalleventa` VALUES (1, 14, 1, 1399);
+INSERT INTO `detalleventa` VALUES (2, 2, 2, 999);
+INSERT INTO `detalleventa` VALUES (2, 4, 3, 999);
+INSERT INTO `detalleventa` VALUES (2, 7, 2, 999);
+INSERT INTO `detalleventa` VALUES (2, 13, 1, 499.5);
+INSERT INTO `detalleventa` VALUES (3, 11, 6, 999);
+INSERT INTO `detalleventa` VALUES (3, 12, 1, 999);
+INSERT INTO `detalleventa` VALUES (4, 8, 1, 249.5);
+INSERT INTO `detalleventa` VALUES (4, 10, 1, 499);
+INSERT INTO `detalleventa` VALUES (4, 13, 5, 249.5);
+INSERT INTO `detalleventa` VALUES (5, 9, 1, 6800);
+INSERT INTO `detalleventa` VALUES (13, 10, 4, 1199);
+
+-- ----------------------------
+-- Table structure for empleado
+-- ----------------------------
+DROP TABLE IF EXISTS `empleado`;
+CREATE TABLE `empleado`  (
+  `idEmpleado` int NOT NULL AUTO_INCREMENT,
+  `eNombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `eApellido` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ePuesto` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `eContrasena` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `eStatus` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idEmpleado`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of empleado
+-- ----------------------------
+INSERT INTO `empleado` VALUES (1, 'Daniel', 'Hernández', 'Gerente', 'abc', 1);
+INSERT INTO `empleado` VALUES (2, 'Edgar', 'Casillas', 'Cajero', '123', 1);
+
+-- ----------------------------
+-- Table structure for factura
+-- ----------------------------
+DROP TABLE IF EXISTS `factura`;
+CREATE TABLE `factura`  (
+  `idFactura` int NOT NULL AUTO_INCREMENT,
+  `fFecha` datetime NOT NULL,
+  `fDisponible` tinyint(1) NOT NULL,
+  `venta_idVenta` int NOT NULL,
+  PRIMARY KEY (`idFactura`, `venta_idVenta`) USING BTREE,
+  INDEX `fk_factura_venta1_idx`(`venta_idVenta` ASC) USING BTREE,
+  CONSTRAINT `fk_factura_venta1` FOREIGN KEY (`venta_idVenta`) REFERENCES `venta` (`idVenta`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of factura
+-- ----------------------------
+INSERT INTO `factura` VALUES (1, '2016-11-16 22:06:54', 0, 1);
+INSERT INTO `factura` VALUES (2, '2016-11-20 03:40:35', 1, 7);
+INSERT INTO `factura` VALUES (3, '2016-11-20 03:44:40', 1, 6);
+INSERT INTO `factura` VALUES (4, '2016-11-20 03:55:29', 1, 3);
+INSERT INTO `factura` VALUES (5, '2016-11-20 03:55:36', 1, 7);
+INSERT INTO `factura` VALUES (6, '2016-11-20 03:58:55', 1, 4);
+INSERT INTO `factura` VALUES (7, '2016-11-23 07:40:36', 1, 12);
+
+-- ----------------------------
+-- Table structure for producto
+-- ----------------------------
+DROP TABLE IF EXISTS `producto`;
+CREATE TABLE `producto`  (
+  `idProducto` int NOT NULL AUTO_INCREMENT,
+  `pNombre` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pTipo` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pConsola` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pGenero` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pStatus` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pPrecio` float NOT NULL,
+  `pStock` int NOT NULL,
+  `pFoto` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'hi',
+  `pDisponible` tinyint(1) NOT NULL,
+  PRIMARY KEY (`idProducto`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1032 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of producto
+-- ----------------------------
+INSERT INTO `producto` VALUES (1, 'Watch Dogs 2', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1399, 2, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\WatchDogs2.jpg', 1);
+INSERT INTO `producto` VALUES (2, 'Watch Dogs 2', 'Videojuegos', 'Playstation', 'Accion', 'Seminuevo', 999, 7, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\WatchDogs2.jpg', 1);
+INSERT INTO `producto` VALUES (3, 'Assassins Creed Black Flag', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 999, 9, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\AssassinsCreedBF.jpg', 1);
+INSERT INTO `producto` VALUES (4, 'Assassins Creed Black Flag', 'Videojuegos', 'Xbox', 'Accion', 'Seminuevo', 499, 10, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\AssassinsCreedBF.jpg', 1);
+INSERT INTO `producto` VALUES (5, 'Playstation 4 PRO', 'Consolas', 'Playstation', 'Otro', 'Nuevo', 6800, 5, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\Ps4Pro.jpg', 1);
+INSERT INTO `producto` VALUES (6, 'Playstation 4 Controller', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 999, 10, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\ControlPs4.jpg', 1);
+INSERT INTO `producto` VALUES (7, 'Xbox One', 'Consolas', 'Xbox', 'Otro', 'Nuevo', 5999, 5, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\XboxSlim.jpg', 1);
+INSERT INTO `producto` VALUES (8, 'Grand Theft Auto V', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1399, 4, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\GTAV.jpg', 1);
+INSERT INTO `producto` VALUES (9, 'Grand Theft Auto V', 'Videojuegos', 'Playstation', 'Accion', 'Seminuevo', 999, 10, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\GTAV.jpg', 1);
+INSERT INTO `producto` VALUES (10, 'Mario Party 10', 'Videojuegos', 'Nintendo', 'Plataforma', 'Nuevo', 1399, 9, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\MarioParty10.jpg', 1);
+INSERT INTO `producto` VALUES (11, 'Mario Party 10', 'Videojuegos', 'Nintendo', 'Plataforma', 'Seminuevo', 999, 0, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\MarioParty10.jpg', 1);
+INSERT INTO `producto` VALUES (12, 'Dark Souls III', 'Videojuegos', 'Playstation', 'RPG', 'Nuevo', 1399, 0, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\DarkSoulsIII.jpg', 1);
+INSERT INTO `producto` VALUES (13, 'Mario Kart 8', 'Videojuegos', 'Nintendo', 'Carreras', 'Nuevo', 1199, 1, 'C:\\Users\\kyo_9\\Documents\\GitHub\\Gamers\\Fotos Productos\\MarioKart8.jpg', 1);
+INSERT INTO `producto` VALUES (14, 'New Super Mario Bros', 'Videojuegos', 'Nintendo', 'accion', 'Nuevo', 1290, 5, '', 1);
+INSERT INTO `producto` VALUES (15, 'Super Mario 3D World + Bowser’s Fury', 'Videojuegos', 'Nintendo', 'Accion', 'Seminuevo', 800, 2, 'hi', 1);
+INSERT INTO `producto` VALUES (16, 'Super Mario 3D All Stars', 'Videojuego', 'Nintendo', 'Accion', 'Nuevo', 1200, 2, 'hi', 2);
+INSERT INTO `producto` VALUES (17, 'Super Mario Odyssey', 'Videojuegos', 'Nintendo', 'Accion', 'Nuevo', 1000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (18, 'Mario Strikers: Battle League ', 'Videojuegos', 'Nintendo', 'Accion', 'Nuevo', 1000, 2, 'hi', 1);
+INSERT INTO `producto` VALUES (19, 'Call of Duty: Vanguard', 'Videojuegos', 'Nintendo', 'Accion', 'Nuevo', 1200, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (20, 'Call of Duty: Black Ops Cold War', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 100, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (21, 'Call of Duty: Modern Warfare', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1300, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (22, 'Call of Duty: Black Ops 4', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 800, 2, 'hi', 1);
+INSERT INTO `producto` VALUES (23, 'Call of Duty: WWII', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1990, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (24, 'Call of Duty: Infinite Warfare', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (25, 'Call of Duty: Modern Warfare Remastered', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1200, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (26, 'Call of Duty: Black Ops 3', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (27, 'Call of Duty: Advanced Warfare', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (28, 'Call of Duty: Ghosts', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (29, 'Nintendo Switch Sports', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1000, 1, 'hi', 2);
+INSERT INTO `producto` VALUES (30, 'Funda para Nintendo Switch', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (31, 'SanDisk Sandisk SDSQXAO-128G', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 300, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (32, 'amFilm Nintendo Switch Protector Pantalla (2 Piezas)', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 300, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (33, 'Nintendo Consola Switch Neon 32GB', 'Consolas', 'Nintendo', 'Otro', 'nuevo', 6000, 3, 'hi', 1);
+INSERT INTO `producto` VALUES (34, 'Nintendo Switch Lite Dialga & Palkia Edición Especial', 'Consolas', 'Nintendo', 'Otro', 'nuevo', 5000, 0, 'hi', 1);
+INSERT INTO `producto` VALUES (35, 'Xbox Series S 512GB', 'Consolas', 'Xbox', 'Otro', 'Nuevo', 7000, 11, 'hi', 1);
+INSERT INTO `producto` VALUES (36, 'Control Inalámbrico Xbox', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (37, 'Razer Wolverine Ultimate', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3600, 2, 'hi', 1);
+INSERT INTO `producto` VALUES (40, 'Razer Nari Ultimate gaming', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3600, 0, 'hi', 1);
+INSERT INTO `producto` VALUES (41, 'Consola Xbox Series S', 'Consolas', 'Xbox', 'Otro', 'Nuevo', 3600, 0, 'hi', 1);
+INSERT INTO `producto` VALUES (42, 'Consola Xbox Series X', 'Consolas', 'Xbox', 'Otro', 'Nuevo', 3600, 0, 'hi', 2);
+INSERT INTO `producto` VALUES (43, 'Halo Infinite - Standard Edition', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 899, 20, 'hi', 11);
+INSERT INTO `producto` VALUES (44, 'Forza Horizon 5', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 899, 22, 'hi', 10);
+INSERT INTO `producto` VALUES (45, 'Sniper Elite 5', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 899, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (46, 'Evil Dead: The Game XBSX', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 2, 'hi', 2);
+INSERT INTO `producto` VALUES (47, 'Watch Dogs Legion ', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (48, 'Assassins Creed Valhalla ', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 48);
+INSERT INTO `producto` VALUES (49, 'Watch Dogs: Legion', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (50, 'Far Cry 6 - Ps5', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (51, 'playvital Funda Camuflaje de Silicona para Playstation 5', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (52, 'Media Remote PS5', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 899, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (53, 'Control Inalámbrico Dualsense Midnight Black - Playstation 5', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (54, 'Sony Interactive Entertainment LLC Control Inalámbrico Dualsense Starlight Blue ', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (55, 'Sony Interactive Entertainment LLC Control Inalámbrico Dualsense Galactic Purple', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (56, 'Monzlteck Soporte de pared para modelo Nintend Switch OLED', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (57, 'Monzlteck New Wall Mount for Nintendo Switch, Near Or Behind TV,', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (58, 'Monzlteck Soporte de Pared para PS5 Playstation 5 (Disco y Digital),', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (59, 'Monzlteck Wall Mount for Nintendo Switch+Controller Mount Bundle', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (60, 'Soporte para Nintendo Switch / Base de pared', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (61, 'Cargador de Switch,Estación de Carga Joy-Con para Nintendo Switch Original & OLE', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (63, 'Resident Evil. Village - Standard Edition - Xbox Series X', 'Accesorios', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (64, 'Elden Ring Xbox One - Standard Edition - Xbox One', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (65, 'Sekiro Shadows Die Twice - Xbox One - Estándar Edition', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (66, 'Dragon Ball Z - Kakarot Xbox One', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (67, 'Dragon Ball: Xenoverse 2', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (68, 'Crash Bandicoot 4', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (69, 'Crash Bandicoot N. Sane Trilogy ', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (70, 'Xbox One - 3', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (71, 'Far Cry 4: Ltd Edt - Standard Edition - Xbox One', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 0, 'hi', 1);
+INSERT INTO `producto` VALUES (72, 'Batman: Arkham Knight - Xbox One - Standard Edition', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 0, 'hi', 7);
+INSERT INTO `producto` VALUES (73, 'Batman: Return to Arkham', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (74, 'Hitman 2 - Xbox One - Standard Edition', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (75, 'Crackdown 3 - Standard Edition', 'Videojuegos', 'Xbox', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (76, 'SonyPS4 Marvel Spiderman: Edición', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (77, 'The Last of Us Part II - PlayStation 4 ', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (78, 'Teenage Mutant Ninja Turtles: The Cowabunga Collection', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (79, 'The Dungeon of Naheulbeuk. The Amulet of Chaos ', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (80, 'Hades - Standard Edition ', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (81, 'Ghost of Tsushima Director\'s Cut - Standard Edition - Playstation 4', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (82, 'God of War - Hits - - Standard Edition - PlayStation 4', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (83, 'Horizon Zero Dawn Complete Edition', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (84, 'Spider-Man: Miles Morales Ultimate Edition', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (85, 'Crash Bandicoot 4: It’s About Time', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (86, 'Gta V Premium Edition', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (87, 'Grand Theft Auto. The Trilogy', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (88, 'Horizon Zero Dawn Complete Edition', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (89, 'WWE 2K22 - Standard Edition - PlayStation 4', 'Videojuegos', 'Playstation', 'Accion', 'Nuevo', 1500, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (90, 'Funko Pop! Star Wars: Book of Boba Fett', 'Accesorios', 'Playstation', 'Accion', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (91, 'Funko Pop! Moment: Mandalorian - Boba Fett & Fennec Shand', 'Accesorios', 'Playstation', 'Accion', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (92, 'Funko Pop! Pop Movies: Godzilla Vs Kong', 'Accesorios', 'Playstation', 'Accion', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (93, 'Funko Pop Movies:Godzilla vs Kong-Heat Ray Godzilla', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (94, 'Funko Pop Películas: Godzilla Vs Kong- MechaGodzilla, Multicolor, estándar', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (95, 'Funko - Pop Movies: Godzilla vs Kong- 10\"', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (96, 'Funko Pop! Marvel: Max Venom - Groot 10\"', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (97, 'Funko Green Goblin Venomized Pop Exclusivo HT', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (98, 'Funko venomized Thor', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (99, 'Funko Figure Pop Marvel Venom Captain America ', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (100, 'Funko - Pop! Marvel: Avengers Endgame', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (101, 'Funko Pop! Marvel: Falcon and The Winter Soldier - Captain America (Sam Wilson)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (102, 'Funko Pop!: The Falcon & Winter Soldier - Falcon (Flying)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (103, 'LEGO Kit de construcción Coleccionable Star Wars™ 75304 Casco de Darth Vader™ (8', '', '', '', '', 0, 0, 'hi', 1);
+INSERT INTO `producto` VALUES (104, 'LEGO Kit de construcción Coleccionable Star Wars™ 75277 Casco de Boba Fett™ (625', '', '', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (105, 'LEGO Kit de construcción Star Wars: The Mandalorian 75318 El Niño (1073 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (106, 'Kit de construcción LEGO® Star Wars: El Ataque de los Clones (1771 elementos): Y', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (107, 'LIGHTAILING Conjunto de Luces para (Star Wars Yoda) Modelo de Construcción de Bl', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (108, 'LEGO Kit de construcción DC Batman™ 76161 Batiplano de 1989 (2363 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (109, 'LEGO Barco Caprino', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (110, 'LEGO Kit de construcción 10295 Porsche 911 (1458 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (111, 'LEGO Kit de construcción Technic™ 42125 Ferrari 488 GTE “AF Corse #51” (1677 Pie', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (112, 'LEGO Kit de construcción de Modelo de Auto Technic™ 42115 Lamborghini Sián FKP 3', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 400, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (113, 'Modelo de automóvil: Bugatti Chiron LEGO® Technic™ (42083)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (114, 'LEGO Kit de construcción Technic™ 42125 Ferrari 488 GTE “AF Corse #51” (1677 Pie', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (115, 'Kit de construcción LEGO® Technic™ (2573 elementos): Land Rover Defender (42110)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (116, 'LEGO Kit de construcción Technic 42111 Dom’s Dodge Charger (1077 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (117, 'LEGO Kit de construcción CreatorExpert (1471 Elementos): Ford Mustang (10265)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (118, 'Kit de construcción LEGO® Star Wars: El Ascenso de Skywalker (1351 elementos): H', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 6000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (119, 'LEGO Kit de construcción Star Wars™ 75302 Transbordador Imperial (660 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (120, 'ATST de Hoth', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (121, 'LEGO Kit de construcción Star Wars: The Mandalorian 75292 The Razor Crest™ (1023', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (122, 'LEGO Kit de construcción Star Wars™ 75316 Caza Estelar Mandaloriano (544 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (123, 'LEGO Kit de construcción Star Wars™ 75314 El Lote Malo: Transbordador de Ataque ', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (124, 'LEGO Kit de construcción Star Wars™ 75311 Merodeador Blindado Imperial (478 Piez', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (125, 'LEGO Kit de construcción Star Wars: Una Nueva Esperanza (4784 Elementos): Destru', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (126, 'Lego Star Wars at-at Ultimate Collector Series 75313 Juego de construcción con 6', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (127, 'LEGO Globo Terraqueo', 'Accesorios', 'Playstation', 'Otro', '', 600, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (128, 'LEGO Diorama Entrenamiento Jedi en Dagobah', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (129, 'LEGO Kit de construcción DC Batman™ 76161 Batiplano de 1989 (2363 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 0);
+INSERT INTO `producto` VALUES (130, 'LEGO Kit de construcción DC Batman™ 76182 Capucha de Batman (410 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (131, 'LEGO Kit de construcción Marvel 76191 Guante del Infinito (590 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (132, 'LEGO Kit de construcción 10280 Ramo de Flores (756 Piezas)', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (134, 'LEGO Iconic Rose 40460', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (135, 'LEGO Duelo contra Zyclops', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (136, 'LEGO Armadura Robotica de Pantera Negra', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (137, 'Asalto Aéreo de los Eternos', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (138, 'Ideas Daily Bugle', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (139, 'LEGO Moto Acrobatica Cohete\r\n', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (140, 'Xbox Game Pass Ultimate 1 mes ', 'Videojuegos', 'Xbox', 'Otro', 'Nuevo', 2222, 2, 'hi', 2);
+INSERT INTO `producto` VALUES (141, 'PDP Gaming Wired Controller: Revenant Blue ', 'Videojuegos', 'Xbox', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (142, 'Control Inalámbrico Compatible con Nintendo Switch', '', 'Nintendo', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (143, 'Switch Controller para Nintendo Switch / Switch Lite, Joystick inalámbrico Momen', 'Videojuegos', 'Nintendo', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (144, 'KUPVALON Capturadora de Video, 4K HDMI a USB 2.0 Vídeo Game Capture, Convertidor', 'Videojuegos', 'Nintendo', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (145, 'Control Alambrico Compatible Xbox One Y Pc Windows Con Vibración', 'Videojuegos', 'Xbox', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (146, 'Gamepad Balamrush Brx20 XBOX ONE Inalámbrico / Windows | Receptor USB | Vibració', 'Videojuegos', 'Xbox', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (147, 'AVEDISTANTE Gamepad Bluetooth con 3 metodos de conexion, Controlador de Juego In', 'Videojuegos', 'Xbox', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (148, 'Archy Mando Control Gamepad Joystick Compatible con Android inalámbrico con Blue', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (149, 'Redlemon Cargador para Controles de PS5, Estación de Carga Dual para Controles d', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (150, 'Cargador dual Mcbazel para PS5, cargador de controlador, estación de carga rápid', 'Accesorios', 'Playstation', 'Otro', 'Nuevo', 700, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (151, 'Consola PlayStation 5 - Standard Edition', 'Consolas', 'Playstation', 'Otro', 'Nuevo', 11555, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (152, 'Consola PlayStation 5 - Digital Edition', 'Consolas', 'Playstation', 'Otro', 'Nuevo', 11555, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (153, 'Sony Interactive Entertainment LLC Estación de Carga para Dualsense StandardPlay', 'Consolas', 'Playstation', 'Otro', 'Nuevo', 11555, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (154, 'Soporte de controlador, soporte de auriculares para Xbox Series X S / Xbox One /', 'Consolas', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (155, 'WEPIGEEK - Soporte para teléfono celular, prensa para celular, plegable, compati', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (156, 'Bangcheer - Cubierta antipolvo para Xbox Series X, funda de consola altamente el', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (157, 'Control Inalámbrico Xbox– Pulse Red - Standard Edition', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (158, 'Control Inalámbrico Xbox - Shock Blue', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (159, 'Mineral Blue Shadow - Controlador inalámbrico personalizado para consola Xbox On', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (160, 'Controlador inalámbrico para Xbox One, apto para Xbox Series X/S/Xbox One S/One ', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (161, 'Mando inalámbrico para Xbox One, mando de juego Zamia Gamepad de 2,4 GHZ compati', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (162, 'Audífonos Recon 50X para Xbox One, PS4 y PC - Standard Edition', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (163, 'Ear Force Recon - Xbox One - Standard Edition', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (164, 'ODDLOOPS Audifonos Gamer Auriculares para juegos, Auriculares para juegos con mi', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (165, 'Carga y Juega Xbox One,OIVO Cargador Control para Xbox Series X/S and Xbox One S', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 4444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (166, 'Cargador para Baterias de Controles Xbox serie X/S , Xbox One S /X - 2 Baterias ', '', 'Xbox', 'Otro', 'Nuevo', 4444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (167, 'Carga y Juega Xbox Series S, OIVO Baterías Recargables para Series X/S and Xbox ', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 4444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (168, 'Filtro de polvo para Xbox Series X, cubierta de filtro de polvo de ventilación a', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (169, 'Seagate Tarjeta de expansión de Almacenamiento para Xbox Series X|S Unidad de Es', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (170, 'PDP Media Remote for Xbox - Xbox Series X', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (171, '8Bitdo Media Remote for Xbox One, Xbox Series X and Xbox Series S (Short Edition', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (172, 'Razer Limited Edition Boba Fett Wireless Controller & Quick Charging Stand Bundl', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (173, 'Controller Gear Xbox Pro Charging Stand Zest Orange. for Xbox Elite, Xbox One, S', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (174, 'KontrolFreek Performance Grips para Xbox One | Negro.', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (175, 'KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (176, 'Control alámbrico PowerA Spectra Infinity para Xbox Series X|S y One - Standard ', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (177, 'PowerA FUSION Pro 2 Controlador videojuegos con cable para Xbox Series X|S, Negr', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (178, 'KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (179, 'KontrolFreek FPS Freek Vortex para Playstation 4 (PS4) y Playstation 5 (PS5) | P', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (180, 'KontrolFreek Call of Duty: Vanguard Performance Thumbsticks for PlayStation 4 (P', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (181, 'KontrolFreek Precision Rings | Aim Assist Motion Control for PlayStation 4 (PS4)', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (182, 'KontrolFreek FPS Freek Battle Royale Nightfall para PlayStation 4 (PS4) y PlaySt', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (183, 'KontrolFreek FPS Freek Galaxy para Xbox One y Xbox Series X | Performance Thumbs', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 11);
+INSERT INTO `producto` VALUES (184, 'Microsoft Game Studios FST-00011 Elite Series 2 - Control Inalámbrico para Xbox ', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (185, 'PowerA FUSION Pro Control Alámbrico para Xbox One & Series X|S - Color Blanco - ', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (186, 'Audífonos Gamer con Micrófono para PS4, Xbox One, PC, Diadema Auriculares Alámbr', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (187, 'Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Mercury', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (188, 'Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Quartz', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (189, 'Razer Opus X – Audífonos inalámbricos con cancelación de ruido – Green', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 3000, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (190, 'Razer Huntsman Mini - 60% Optical Keyboard (Clicky Purple Switch)', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (191, 'CORN - 61 teclas gruesas con perfil de diseño original PBT para teclado 60 % mec', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (192, 'Z-66 Teclado mecánico para juegos, retroiluminación LED arco iris, teclas PBT de', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (193, 'OKKID Teclado mecánico, Teclado para Juegos con Cable, retroiluminación RGB, par', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (194, 'INSTIGO Silla Gamer Ergonómica IG626 Reclinable hasta 180° | con Cojines para So', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (195, 'Balam Rush Silla Gamer Thunder Comp Ergonomica Gray Edition BR-932929', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (196, 'Balam Rush Silla Gamer Thunder Tour Ergonomica Dark-Light Edition BR-932875', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (197, 'HON HONI2M1AFC10TK - Silla de Trabajo de Encendido, Color Gris y Negro', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 444, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (198, 'Space Seating Silla ejecutiva de Asiento y Respaldo de Rejilla de Aire Oscuro', 'Accesorios', 'Xbox', 'Otro', 'Nuevo', 11111, 1, 'hi', 11);
+INSERT INTO `producto` VALUES (199, 'Nintendo amiibo Link (Majora\'s Mask) (The Legend of Zelda series) (Japan Import)', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 1111, 1, 'hi', 1);
+INSERT INTO `producto` VALUES (200, 'Nintendo amiibo Link (Twilight Princess) (The Legend of Zelda series) (Japan Imp', 'Accesorios', 'Nintendo', 'Otro', 'Nuevo', 111, 1, 'hi', 11);
+
+-- ----------------------------
+-- Table structure for venta
+-- ----------------------------
+DROP TABLE IF EXISTS `venta`;
+CREATE TABLE `venta`  (
+  `idVenta` int NOT NULL AUTO_INCREMENT,
+  `vFecha` datetime NOT NULL,
+  `vTipoPago` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `VC` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `vDisponible` tinyint(1) NOT NULL,
+  `vSaldo` float NOT NULL DEFAULT 0,
+  `Empleado_idEmpleado` int NOT NULL,
+  `Cliente_idCliente` int NOT NULL,
+  PRIMARY KEY (`idVenta`) USING BTREE,
+  INDEX `fk_Venta_Empleado_idx`(`Empleado_idEmpleado` ASC) USING BTREE,
+  INDEX `fk_Venta_Cliente1_idx`(`Cliente_idCliente` ASC) USING BTREE,
+  CONSTRAINT `fk_Venta_Cliente1` FOREIGN KEY (`Cliente_idCliente`) REFERENCES `cliente` (`idCliente`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Venta_Empleado` FOREIGN KEY (`Empleado_idEmpleado`) REFERENCES `empleado` (`idEmpleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of venta
+-- ----------------------------
+INSERT INTO `venta` VALUES (1, '2016-11-16 21:58:36', 'Efectivo', 'V', 1, 0, 1, 2);
+INSERT INTO `venta` VALUES (2, '2016-11-17 23:55:18', 'Efectivo', 'V', 0, 0, 1, 4);
+INSERT INTO `venta` VALUES (3, '2016-11-18 00:32:55', 'Tarjeta', 'V', 1, 0, 1, 2);
+INSERT INTO `venta` VALUES (4, '2016-11-20 02:38:55', 'Efectivo', 'V', 1, 0, 1, 4);
+INSERT INTO `venta` VALUES (6, '2016-11-20 02:48:48', 'Efectivo', 'V', 1, 0, 1, 3);
+INSERT INTO `venta` VALUES (7, '2016-11-20 02:56:23', 'Efectivo', 'V', 1, 699.3, 1, 2);
+INSERT INTO `venta` VALUES (8, '2016-11-20 03:31:15', 'Electrónico', 'C', 1, 0, 1, 3);
+INSERT INTO `venta` VALUES (9, '2016-11-22 18:10:51', 'Electrónico', 'V', 0, 699.3, 1, 2);
+INSERT INTO `venta` VALUES (10, '2016-11-23 07:28:21', 'Efectivo', 'V', 1, 0, 1, 5);
+INSERT INTO `venta` VALUES (11, '2016-11-23 07:36:29', 'Efectivo', 'V', 0, 0, 1, 1);
+INSERT INTO `venta` VALUES (12, '2016-11-23 07:39:44', 'Tarjeta', 'V', 1, 0, 1, 1);
+INSERT INTO `venta` VALUES (13, '2016-11-23 07:41:59', 'Electrónico', 'C', 1, 0, 1, 1);
+INSERT INTO `venta` VALUES (14, '2016-11-23 07:43:15', 'Electrónico', 'V', 1, 2445.8, 1, 1);
+
+-- ----------------------------
+-- View structure for capellido
+-- ----------------------------
+DROP VIEW IF EXISTS `capellido`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `capellido` AS select `cliente`.`idCliente` AS `idCliente`,`cliente`.`cEmail` AS `cEmail`,`cliente`.`cTel` AS `cTel` from `cliente` where `cliente`.`cApellido` = ' Hernández';
+
+-- ----------------------------
+-- View structure for cnombre
+-- ----------------------------
+DROP VIEW IF EXISTS `cnombre`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `cnombre` AS select `cliente`.`idCliente` AS `idCliente`,`cliente`.`cEmail` AS `cEmail`,`cliente`.`cTel` AS `cTel` from `cliente` where `cliente`.`cEmail` = ' cApellido';
+
+-- ----------------------------
+-- Triggers structure for table producto
+-- ----------------------------
+DROP TRIGGER IF EXISTS `producto_int`;
+delimiter ;;
+CREATE TRIGGER `producto_int` AFTER INSERT ON `producto` FOR EACH ROW BEGIN
+
+INSERT INTO
+bitacora(id,ejecutor,actividad,informacion_actual)VALUES(
+    NEW.idProducto,CURRENT_USER,'Se inserto nuevo producto',concat('Informacion actual: ',NEW.pNombre,'' ,NEW.pTipo,'' ,NEW.pGenero,''));
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Triggers structure for table producto
+-- ----------------------------
+DROP TRIGGER IF EXISTS `producto_dele`;
+delimiter ;;
+CREATE TRIGGER `producto_dele` AFTER DELETE ON `producto` FOR EACH ROW BEGIN
+
+INSERT INTO
+bitacora_del(id,ejecutor,actividad,informacion_actual)VALUES(
+    OLD.idProducto,CURRENT_USER,'Se inserto nuevo producto',concat('Informacion actual: ',OLD.pNombre,'' ,OLD.pTipo,'' ,OLD.pGenero,''));
+END
+;;
+delimiter ;
+
+SET FOREIGN_KEY_CHECKS = 1;
